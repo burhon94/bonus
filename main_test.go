@@ -5,11 +5,11 @@ import "testing"
 func Test_bonus(t *testing.T) {
 	tests := []struct {
 		name   string
-		amount int
+		amount [] int
 		want   int
 	}{
-		{"Punches bonus", 12_000, 100},
-		{"No bonus", 5_000, 0},
+		{"Purchanse bonus", [] int{12_000, 8_000, 15_000, 8_000}, 350},
+		{"No bonus", [] int{5_000}, 0},
 	}
 	for _, test := range tests {
 		got := bonus(test.amount)
