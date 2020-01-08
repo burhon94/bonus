@@ -11,12 +11,14 @@ func main() {
 	fmt.Println(amountBonus)
 }
 
-func bonus(amount int) int {
+func bonus(amount [] int) int {
 	const boundPurchanse = 10_000
 	const percent = 5
 	amountBonus := 0
-	if amount > boundPurchanse {
-		amountBonus = (amount - boundPurchanse) * percent / 100
+	for _, amount := range amount {
+		if amount > boundPurchanse {
+			amountBonus += (amount - boundPurchanse) * percent / 100
+		}
 	}
 	return amountBonus
 }
